@@ -4,5 +4,12 @@
 }
 
 .cart-container {
-    background-color: #FFE0B3;  ;
+    background-color: #FFE0B3;  
+    padding: 20px;
+}
+.product-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 45px;
+    padding: 50px;
 }
