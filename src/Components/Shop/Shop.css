@@ -3,13 +3,23 @@
     grid-template-columns: 4fr 1fr;
 }
 
+.cart-content {
+    position: sticky;
+    top: 30px;
+}
+
+.cart-content p {
+    margin: 25px 0;
+}
+
 .cart-container {
-    background-color: #FFE0B3;  
+    background: rgba(255, 153, 0, 0.3);
     padding: 20px;
 }
-.product-container{
+
+.product-container {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 45px;
     padding: 50px;
 }

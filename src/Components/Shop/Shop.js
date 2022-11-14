@@ -16,6 +16,16 @@ const Shop = () => {
     setCart(newCart);
   };
 
+  let price = 0;
+  let shipping = 0;
+  cart.forEach((item) => {
+    console.log(item);
+    price = price + item.price;
+    shipping = shipping + item.shipping;
+  });
+  const tax = (price * 10) / 100;
+  const total = price + shipping + tax;
+
   return (
     <div className="shop-container">
       <div className="product-container">
@@ -29,8 +39,14 @@ const Shop = () => {
       </div>
 
       <div className="cart-container">
+        <div className="cart-content">
         <h1>Order Summary</h1>
         <p>Selected Items: {cart.length}</p>
+        <p>Total Price: ${price}</p>
+        <p>Total Shipping Charge: ${shipping}</p>
+        <p>Tax: ${tax}</p>
+        <h3>Grand Total: ${total}</h3>
+        </div>
       </div>
     </div>
   );
